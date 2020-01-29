@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+
+    <!-- https://stackoverflow.com/questions/8195741/how-do-they-do-this-mobile-site-added-to-homescreen-appears-as-standalone-app -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+
+    <meta
+      name="viewport"
+      content="width=device-width, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Chess Opening</title>
+
+    <link rel="stylesheet" href="index.css" />
+    <!--
+    <link
+      rel="apple-touch-icon"
+      sizes="128x128"
+      href="app_icon/app_icon_128.png"
+    />
+    -->
+  </head>
+
+  <body>
+    <script src="index.js"></script>
+    <script src="data.js"></script>
+    <divTop>
+      <div>
+        <label
+          ><input
+            type="radio"
+            name="m1"
+            value="e4"
+            checked="checked"
+          />e4</label
+        >
+      </div>
+      <div>
+        <label><input type="radio" name="m1" value="d4" />d4</label>
+      </div>
+    </divTop>
+    <divTable>
+      <table id="tableMain">
+        <colgroup>
+          <!-- button -->
+          <col class="col1" />
+          <!-- mBefore -->
+          <col class="col2" />
+          <!-- mThis -->
+          <col class="col3" />
+          <!-- main -->
+          <col class="col4" />
+          <!-- wBar -->
+          <col class="col5" />
+          <!-- drawBar -->
+          <col class="col6" />
+          <!-- bBar -->
+          <col class="col7" />
+        </colgroup>
+        <tbody>
+          <tr>
+            <th></th>
+            <th>Moves Before</th>
+            <th>Current<br />Move</th>
+            <th>
+              width: Entire Moves<br />
+              height: Number of Games<br />
+              color(Red): Taking Pieces Early
+            </th>
+            <th>White</th>
+            <th>Draw</th>
+            <th>Black</th>
+          </tr>
+        </tbody>
+      </table>
+    </divTable>
+  </body>
+</html>
