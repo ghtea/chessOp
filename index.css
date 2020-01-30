@@ -13,7 +13,7 @@ html {
 body {
   width: 375px;
   /*max-width: 400px;*/
-  background-color: #cccccc;
+  background-color: #dddddd;
   position: static;
   text-align: center;
   margin-right: auto !important;
@@ -70,7 +70,29 @@ body {
   border-bottom: #999999 solid 3px;
 }
 
+.btnMove {
+  display: none;
+}
+
+/* moves before */
+#tableMain tbody tr td:nth-child(2) {
+  color: #333333;
+  text-align: left;
+}
+
 .barRate {
   width: 24px;
   background-color: grey;
+}
+#tableMain tbody tr td:nth-child(5) {
+  color: hsl(0, 0%, 100%);
+  border: hsl(0, 0%, 50%) solid 2px;
+}
+#tableMain tbody tr td:nth-child(6) {
+  color: hsl(0, 0%, 50%);
+  border: hsl(0, 0%, 100%) solid 2px;
+}
+#tableMain tbody tr td:nth-child(7) {
+  color: hsl(0, 0%, 0%);
+  border: hsl(0, 0%, 50%) solid 2px;
 }
