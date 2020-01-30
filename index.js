@@ -11,7 +11,7 @@ var startMainWidth = 20;
 var ratioMainWidth = 60;
 var startMainHeight = 10;
 var ratioMainHeight = 30;
-var ratioBarHeight = 2.5;
+var ratioBarHeight = 3;
 
 var colorPiece = "#33D71E";
 var colorFight = "#FF3130";
@@ -45,7 +45,6 @@ function showAll() {
     var cell4 = this_row.insertCell(3);
     var cell5 = this_row.insertCell(4);
     var cell6 = this_row.insertCell(5);
-    var cell7 = this_row.insertCell(6);
 
     this_row.classList.add("rowTableMain");
     this_row.classList.add("row" + "m" + this_stage);
@@ -55,8 +54,15 @@ function showAll() {
       "<label><input type='button' class='btnMove' id=" +
       this_mFull +
       "/>&#128073;</label>";
-    cell2.innerHTML = this_mBefore;
-    cell3.innerHTML = this_mThis;
+    cell1.innerHTML = this_mBefore;
+    cell2.innerHTML = this_mThis;
+
+    /* label, button first */
+    var labelMain = document.createElement("label");
+    var inputBtnMain = document.createElement("input");
+    inputBtnMain.setAttribute("type", "button");
+    inputBtnMain.classList.add("btnMove");
+    inputBtnMain.setAttribute("id", this_mFull);
 
     /* rect Main below */
     var rectMain = document.createElement("div");
@@ -72,7 +78,9 @@ function showAll() {
 
     rectMain.classList.add("rectMain");
 
-    cell4.appendChild(rectMain);
+    labelMain.appendChild(inputBtnMain);
+    labelMain.appendChild(rectMain);
+    cell3.appendChild(labelMain);
 
     /* 3 bars below */
     var wWinRateResult;
@@ -97,9 +105,9 @@ function showAll() {
     rectBarDraw.classList.add("barRate");
     rectBarB.classList.add("barRate");
 
-    cell5.appendChild(rectBarW);
-    cell6.appendChild(rectBarDraw);
-    cell7.appendChild(rectBarB);
+    cell4.appendChild(rectBarW);
+    cell5.appendChild(rectBarDraw);
+    cell6.appendChild(rectBarB);
   }
 
   var btnsMove = document.getElementsByClassName("btnMove");

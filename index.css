@@ -58,24 +58,21 @@ body {
 }
 
 .col1 {
-  width: 20px;
-}
-.col2 {
   width: 100px;
 }
-.col3 {
+.col2 {
   width: 20px;
 }
+.col3 {
+  width: 183px;
+}
 .col4 {
-  width: 153px;
+  width: 24px;
 }
 .col5 {
   width: 24px;
 }
 .col6 {
-  width: 24px;
-}
-.col7 {
   width: 24px;
 }
 
@@ -97,26 +94,26 @@ body {
 }
 
 /* moves before */
-#tableMain tbody tr td:nth-child(2) {
+#tableMain tbody tr td:nth-child(1) {
   color: #333333;
   text-align: left;
 }
 
-tr.rowm2 td:nth-child(3),
-tr.rowm4 td:nth-child(3) {
+tr.rowm2 td:nth-child(2),
+tr.rowm4 td:nth-child(2) {
   background-color: #000000;
   color: #ffffff;
 }
 
-tr.rowm3 td:nth-child(3),
-tr.rowm5 td:nth-child(3) {
+tr.rowm3 td:nth-child(2),
+tr.rowm5 td:nth-child(2) {
   background-color: #ffffff;
   color: #000000;
 }
 
+#tableMain tbody tr td:nth-child(4),
 #tableMain tbody tr td:nth-child(5),
-#tableMain tbody tr td:nth-child(6),
-#tableMain tbody tr td:nth-child(7) {
+#tableMain tbody tr td:nth-child(6) {
   position: relative;
 }
 
@@ -126,15 +123,15 @@ tr.rowm5 td:nth-child(3) {
   position: absolute;
   bottom: 0;
 }
-#tableMain tbody tr td:nth-child(5) .barRate {
+#tableMain tbody tr td:nth-child(4) .barRate {
   background-color: hsl(0, 0%, 100%);
   border: hsl(0, 0%, 50%) solid 2px;
 }
-#tableMain tbody tr td:nth-child(6) .barRate {
-  color: hsl(0, 0%, 50%);
+#tableMain tbody tr td:nth-child(5) .barRate {
+  background-color: hsl(0, 0%, 50%);
   border: hsl(0, 0%, 100%) solid 2px;
 }
-#tableMain tbody tr td:nth-child(7) .barRate {
-  color: hsl(0, 0%, 0%);
+#tableMain tbody tr td:nth-child(6) .barRate {
+  background-color: hsl(0, 0%, 0%);
   border: hsl(0, 0%, 50%) solid 2px;
 }
