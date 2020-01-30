@@ -25,7 +25,7 @@ function compaireFunc(key) {
 
 function showAll() {
   var currentMove1 = document.querySelector('input[name="m1"]:checked').value;
-
+  console.log(currentMove1);
   for (var i = 0; i < lengthTable; i++) {
     var this_mFull = dataOriginal[i]["mFull"];
     var this_movesNumZ = dataOriginal[i]["movesNumZ"];
