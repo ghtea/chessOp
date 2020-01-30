@@ -122,7 +122,7 @@ function showAll() {
 
   for (var i = 0; i < lengthTable; i++) {
     var this_row = document.getElementsByClassName("rowTableMain")[i];
-    var this_mBefore = dataOriginal[i]["this_mBefore"];
+    var this_mBefore = dataOriginal[i]["mBefore"];
     if (currentMove1 == this_mBefore) {
       this_row.classList.remove("rowHide");
     } else {
@@ -135,7 +135,7 @@ function hideShowSome() {
   clikedMoveFull = this.getAttribute("id");
   for (var i = 0; i < lengthTable; i++) {
     var this_row = document.getElementsByClassName("rowTableMain")[i];
-    var this_mBefore = dataOriginal[i]["this_mBefore"];
+    var this_mBefore = dataOriginal[i]["mBefore"];
     if (clikedMoveFull == this_mBefore) {
       this_row.classList.remove("rowHide");
     } else {
