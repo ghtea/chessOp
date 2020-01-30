@@ -26,7 +26,6 @@ function compaireFunc(key) {
 
 function showAll() {
   var currentMove1 = document.querySelector('input[name="m1"]:checked').value;
-  console.log(currentMove1);
   for (var i = 0; i < lengthTable; i++) {
     var this_mFull = dataOriginal[i]["mFull"];
     var this_movesNumZ = dataOriginal[i]["movesNumZ"];
@@ -137,6 +136,7 @@ function showAll() {
 
 function hideShowSome() {
   clikedMoveFull = this.getAttribute("id");
+  console.log(this);
   console.log(clikedMoveFull);
   for (var i = 0; i < lengthTable; i++) {
     var this_row = document.getElementsByClassName("rowTableMain")[i];
