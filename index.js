@@ -67,12 +67,11 @@ function showAll() {
     */
 
     cell2.innerHTML =
-      "<label><input type='button' class = 'btnMove' id=" +
+      "<input type='button' class = 'btnMove' id=" +
       this_mFull +
       "value =" +
       this_mThis +
-      ">" +
-      "</label>";
+      ">";
 
     /* rect Main below */
     var rectMain = document.createElement("div");
