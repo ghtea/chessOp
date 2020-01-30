@@ -117,12 +117,14 @@ tr.rowm5 td:nth-child(3) {
 #tableMain tbody tr td:nth-child(5),
 #tableMain tbody tr td:nth-child(6),
 #tableMain tbody tr td:nth-child(7) {
+  position: relative;
 }
 
 .barRate {
   width: 20px;
   background-color: grey;
-  vertical-align: bottom;
+  position: absolute;
+  bottom: 0;
 }
 #tableMain tbody tr td:nth-child(5) .barRate {
   background-color: hsl(0, 0%, 100%);
