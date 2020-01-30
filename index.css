@@ -33,6 +33,7 @@ body {
   margin-left: 10px;
   margin-right: 10px;
   font-size: 1.2rem;
+  display: table;
 }
 
 #divE4 {
@@ -43,6 +44,12 @@ body {
 #divD4 {
   background-color: #ffffff;
   color: #000000;
+}
+
+#divD4 label,
+#divE4 label {
+  display: table-cell;
+  vertical-align: middle;
 }
 
 #rdE4,
@@ -110,13 +117,12 @@ tr.rowm5 td:nth-child(3) {
 #tableMain tbody tr td:nth-child(5),
 #tableMain tbody tr td:nth-child(6),
 #tableMain tbody tr td:nth-child(7) {
-  display: flex;
-  align-items: flex-end;
 }
 
 .barRate {
   width: 20px;
   background-color: grey;
+  vertical-align: bottom;
 }
 #tableMain tbody tr td:nth-child(5) .barRate {
   background-color: hsl(0, 0%, 100%);
