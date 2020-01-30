@@ -68,6 +68,7 @@ function showAll() {
     var rectMainHeight = startMainHeight + current_playNumZ * ratioMainHeight;
 
     var currentWeight = current_tPNvalueZ;
+    console.log(rectMainColor);
     var rectMainColor = pickHex("#FF3130", "#33D71E", currentWeight);
 
     rectMain.style.width = rectMainWidth + "px";
