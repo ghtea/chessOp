@@ -43,13 +43,13 @@ body {
   width: 20px;
 }
 .col2 {
-  width: 90px;
+  width: 100px;
 }
 .col3 {
   width: 20px;
 }
 .col4 {
-  width: 163px;
+  width: 153px;
 }
 .col5 {
   width: 24px;
@@ -62,7 +62,7 @@ body {
 }
 
 #tableMain tbody th {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 
 #tableMain tbody tr {
@@ -84,15 +84,15 @@ body {
   width: 20px;
   background-color: grey;
 }
-#tableMain tbody tr td:nth-child(5) {
-  color: hsl(0, 0%, 100%);
+#tableMain tbody tr td:nth-child(5) .barRate {
+  background-color: hsl(0, 0%, 100%);
   border: hsl(0, 0%, 50%) solid 2px;
 }
-#tableMain tbody tr td:nth-child(6) {
+#tableMain tbody tr td:nth-child(6) .barRate {
   color: hsl(0, 0%, 50%);
   border: hsl(0, 0%, 100%) solid 2px;
 }
-#tableMain tbody tr td:nth-child(7) {
+#tableMain tbody tr td:nth-child(7) .barRate {
   color: hsl(0, 0%, 0%);
   border: hsl(0, 0%, 50%) solid 2px;
 }
