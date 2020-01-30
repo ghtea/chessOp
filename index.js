@@ -104,3 +104,5 @@ function showAll() {
     cell7.appendChild(rectBarB);
   }
 }
+
+window.onload = showAll();

@@ -15,6 +15,10 @@ html {
   background-color: grey;
 }
 
+#tableMain tbody th {
+  font-size: 0.9rem;
+}
+
 #tableMain tbody tr {
   height: 80px;
 }
