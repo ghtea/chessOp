@@ -52,7 +52,7 @@ function showAll() {
 
     cell1.innerHTML = this_mBefore;
 
-    /* label, button first */
+    /*  belows don't work... so I tried like next
     var labelMain = document.createElement("label");
     var inputBtnMain = document.createElement("input");
     inputBtnMain.setAttribute("type", "button");
@@ -62,6 +62,14 @@ function showAll() {
     labelMain.appendChild(inputBtnMain);
     labelMain.textContent = this_mThis;
     cell2.appendChild(labelMain);
+    */
+
+    cell2.innerHTML =
+      "<label><input type='button' class = 'btnMove' id=" +
+      this_mFull +
+      ">" +
+      this_mThis +
+      "</label>";
 
     /* rect Main below */
     var rectMain = document.createElement("div");
