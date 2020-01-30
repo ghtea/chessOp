@@ -136,12 +136,12 @@ function showAll() {
 }
 
 function hideShowSome() {
-  console.log(clikedMoveFull);
   clikedMoveFull = this.getAttribute("id");
+  console.log(clikedMoveFull);
   for (var i = 0; i < lengthTable; i++) {
     var this_row = document.getElementsByClassName("rowTableMain")[i];
     var this_mBefore = dataOriginal[i]["mBefore"];
-    console.log(this_mBefore);
+
     if (clikedMoveFull == this_mBefore) {
       this_row.classList.remove("rowHide");
     } else {
