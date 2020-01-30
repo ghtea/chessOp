@@ -127,8 +127,9 @@ function showAll() {
   for (var i = 0; i < lengthTable; i++) {
     var this_row = document.getElementsByClassName("rowTableMain")[i];
     var this_mBefore = dataOriginal[i]["mBefore"];
+
+    console.log(currentMove1);
     console.log(this_mBefore);
-    console.log(this_row);
     if (currentMove1 == this_mBefore) {
       this_row.classList.remove("rowHide");
     } else {
