@@ -60,7 +60,7 @@ function showAll() {
     inputBtnMain.setAttribute("id", this_mFull);
 
     labelMain.appendChild(inputBtnMain);
-    label.textContent = this_mThis;
+    labelMain.textContent = this_mThis;
     cell2.appendChild(labelMain);
 
     /* rect Main below */
