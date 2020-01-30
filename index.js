@@ -6,6 +6,7 @@ var tableMain = document.getElementById("tableMain");
 var lengthTable = dataOriginal.length;
 
 var currentStage;
+var clikedMoveFull;
 
 var startMainWidth = 20;
 var ratioMainWidth = 60;
@@ -119,11 +120,10 @@ function showAll() {
     btnsMove[i].addEventListener("click", hideShowSome);
   }
 
-  currentStage = 2;
   for (var i = 0; i < lengthTable; i++) {
     var this_row = document.getElementsByClassName("rowTableMain")[i];
-    var this_stage = dataOriginal[i]["stage"];
-    if (currentStage == this_stage) {
+    var this_mBefore = dataOriginal[i]["this_mBefore"];
+    if (currentMove1 == this_mBefore) {
       this_row.classList.remove("rowHide");
     } else {
       this_row.classList.add("rowHide");
@@ -132,11 +132,11 @@ function showAll() {
 }
 
 function hideShowSome() {
-  currentStage = this.getAttribute("id");
+  clikedMoveFull = this.getAttribute("id");
   for (var i = 0; i < lengthTable; i++) {
     var this_row = document.getElementsByClassName("rowTableMain")[i];
-    var this_stage = dataOriginal[i]["stage"];
-    if (currentStage == this_stage) {
+    var this_mBefore = dataOriginal[i]["this_mBefore"];
+    if (clikedMoveFull == this_mBefore) {
       this_row.classList.remove("rowHide");
     } else {
       this_row.classList.add("rowHide");

@@ -86,7 +86,7 @@ body {
 
 #tableMain tbody tr {
   height: 90px;
-  border-bottom: transparent solid 3px;
+  border-bottom: hsl(0, 0%, 50%) solid 3px;
 }
 
 #tableMain tbody tr.rowHide {
