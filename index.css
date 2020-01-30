@@ -18,12 +18,37 @@ html {
 
 #divE4,
 #divD4 {
+  width: 100px;
+  margin-left: 10px;
+  margin-right: 10px;
   font-size: 1.2rem;
 }
 
 #rdE4,
 #rdD4 {
   display: none;
+}
+
+.col1 {
+  width: 20px;
+}
+.col2 {
+  width: 90px;
+}
+.col3 {
+  width: 20px;
+}
+.col4 {
+  width: 145px;
+}
+.col5 {
+  width: 30px;
+}
+.col6 {
+  width: 30px;
+}
+.col7 {
+  width: 30px;
 }
 
 #tableMain tbody th {
@@ -36,6 +61,6 @@ html {
 }
 
 .barRate {
-  width: 30px;
+  width: 24px;
   background-color: grey;
 }
