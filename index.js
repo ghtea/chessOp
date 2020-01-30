@@ -5,6 +5,8 @@ pSBC (함수)
 var tableMain = document.getElementById("tableMain");
 var lengthTable = dataOriginal.length;
 
+var currentStage;
+
 var startMainWidth = 20;
 var ratioMainWidth = 60;
 var startMainHeight = 10;
@@ -21,48 +23,47 @@ function compaireFunc(key) {
 }
 
 function showAll() {
-  var m1 = document.querySelector('input[name="m1"]:checked').value;
-  var rows = document.getElementsByClassName("rowTableMain");
+  var currentMove1 = document.querySelector('input[name="m1"]:checked').value;
 
   for (var i = 0; i < lengthTable; i++) {
-    var current_mFull = dataOriginal[i]["mFull"];
-    var current_movesNumZ = dataOriginal[i]["movesNumZ"];
-    var current_tPNvalueZ = dataOriginal[i]["tPNvalueZ"];
-    var current_playNumZ = dataOriginal[i]["playNumZ"];
-    var current_drawRate = dataOriginal[i]["drawRate"];
-    var current_wWinRateGap = dataOriginal[i]["wWinRateGap"];
-    var current_wWinRate = dataOriginal[i]["wWinRate"];
-    var current_bWinRate = dataOriginal[i]["bWinRate"];
-    var current_mBefore = dataOriginal[i]["mBefore"];
-    var current_mThis = dataOriginal[i]["mThis"];
-    var current_stage = dataOriginal[i]["stage"];
+    var this_mFull = dataOriginal[i]["mFull"];
+    var this_movesNumZ = dataOriginal[i]["movesNumZ"];
+    var this_tPNvalueZ = dataOriginal[i]["tPNvalueZ"];
+    var this_playNumZ = dataOriginal[i]["playNumZ"];
+    var this_drawRate = dataOriginal[i]["drawRate"];
+    var this_wWinRateGap = dataOriginal[i]["wWinRateGap"];
+    var this_wWinRate = dataOriginal[i]["wWinRate"];
+    var this_bWinRate = dataOriginal[i]["bWinRate"];
+    var this_mBefore = dataOriginal[i]["mBefore"];
+    var thismThis = dataOriginal[i]["mThis"];
+    var this_stage = dataOriginal[i]["stage"];
 
-    var row = tableMain.insertRow(i + 1);
-    var cell1 = row.insertCell(0);
-    var cell2 = row.insertCell(1);
-    var cell3 = row.insertCell(2);
-    var cell4 = row.insertCell(3);
-    var cell5 = row.insertCell(4);
-    var cell6 = row.insertCell(5);
-    var cell7 = row.insertCell(6);
+    var this_row = tableMain.insertRow(i + 1);
+    var cell1 = this_row.insertCell(0);
+    var cell2 = this_row.insertCell(1);
+    var cell3 = this_row.insertCell(2);
+    var cell4 = this_row.insertCell(3);
+    var cell5 = this_row.insertCell(4);
+    var cell6 = this_row.insertCell(5);
+    var cell7 = this_row.insertCell(6);
 
-    row.classList.add("rowTableMain");
-    row.classList.add("row" + "m" + current_stage);
-    row.setAttribute("id", "row" + current_mFull);
+    this_row.classList.add("rowTableMain");
+    this_row.classList.add("row" + "m" + this_stage);
+    this_row.setAttribute("id", "row" + this_mFull);
 
     cell1.innerHTML =
       "<label><input type='button' class='btnMove' id=" +
-      current_mFull +
+      this_mFull +
       "/>&#128073;</label>";
-    cell2.innerHTML = current_mBefore;
-    cell3.innerHTML = current_mThis;
+    cell2.innerHTML = this_mBefore;
+    cell3.innerHTML = this_mThis;
 
     /* rect Main below */
     var rectMain = document.createElement("div");
-    var rectMainWidth = startMainWidth + current_movesNumZ * ratioMainWidth;
-    var rectMainHeight = startMainHeight + current_playNumZ * ratioMainHeight;
+    var rectMainWidth = startMainWidth + this_movesNumZ * ratioMainWidth;
+    var rectMainHeight = startMainHeight + this_playNumZ * ratioMainHeight;
 
-    var currentWeight = current_tPNvalueZ;
+    var currentWeight = this_tPNvalueZ;
     console.log(rectMainColor);
     var rectMainColor = pSBC(currentWeight, colorPiece, colorFight);
 
@@ -77,11 +78,11 @@ function showAll() {
     /* 3 bars below */
     var wWinRateResult;
     var bWinRateResult;
-    if (current_wWinRateGap >= 0) {
-      wWinRateResult = current_wWinRateGap;
+    if (this_wWinRateGap >= 0) {
+      wWinRateResult = this_wWinRateGap;
       bWinRateResult = 0;
     } else {
-      bWinRateResult = -current_wWinRateGap;
+      bWinRateResult = -this_wWinRateGap;
       wWinRateResult = 0;
     }
 
@@ -90,7 +91,7 @@ function showAll() {
     var rectBarB = document.createElement("div");
 
     rectBarW.style.height = wWinRateResult + "px";
-    rectBarDraw.style.height = current_drawRate + "px";
+    rectBarDraw.style.height = this_drawRate + "px";
     rectBarB.style.height = bWinRateResult + "px";
 
     rectBarW.classList.add("barRate");
@@ -100,6 +101,24 @@ function showAll() {
     cell5.appendChild(rectBarW);
     cell6.appendChild(rectBarDraw);
     cell7.appendChild(rectBarB);
+  }
+
+  var btnsMove = document.getElementsByClassName("btnMove");
+  for (var i = 0; i < lengthTable; i++) {
+    btnsMove[i].addEventListener("click", showHide);
+  }
+}
+
+function showHide() {
+  currentStage = this.getAttribute("id");
+  for (var i = 0; i < lengthTable; i++) {
+    var this_row = document.getElementsByClassName("rowTableMain")[i];
+    var this_stage = dataOriginal[i]["stage"];
+    if (currentStage == this_stage) {
+      this_row.classList.remove("rowHide");
+    } else {
+      this_row.classList.add("rowHide");
+    }
   }
 }
 

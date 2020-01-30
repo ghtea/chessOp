@@ -70,6 +70,10 @@ body {
   border-bottom: #999999 solid 3px;
 }
 
+#tableMain tbody tr.rowHide {
+  display: none;
+}
+
 .btnMove {
   display: none;
 }
@@ -78,6 +82,13 @@ body {
 #tableMain tbody tr td:nth-child(2) {
   color: #333333;
   text-align: left;
+}
+
+#tableMain tbody tr td:nth-child(5),
+#tableMain tbody tr td:nth-child(6),
+#tableMain tbody tr td:nth-child(7) {
+  display: flex;
+  align-items: flex-end;
 }
 
 .barRate {
