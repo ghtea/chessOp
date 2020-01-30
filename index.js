@@ -8,21 +8,13 @@ var startMainHeight = 10;
 var ratioMainHeight = 30;
 var ratioBarHeight = 2.5;
 
+var colorFight = "FF3130";
+var colorPiece = "33D71E";
+
 function compaireFunc(key) {
   return function(a, b) {
     return b[key] - a[key];
   };
-}
-
-function pickHex(color1, color2, weight) {
-  var w1 = weight;
-  var w2 = 1 - w1;
-  var rgb = [
-    Math.round(color1[0] * w1 + color2[0] * w2),
-    Math.round(color1[1] * w1 + color2[1] * w2),
-    Math.round(color1[2] * w1 + color2[2] * w2)
-  ];
-  return rgb;
 }
 
 function showAll() {
@@ -69,7 +61,7 @@ function showAll() {
 
     var currentWeight = current_tPNvalueZ;
     console.log(rectMainColor);
-    var rectMainColor = pickHex("#FF3130", "#33D71E", currentWeight);
+    var rectMainColor = blend_colors(colorFight, colorPiece, currentWeight);
 
     rectMain.style.width = rectMainWidth + "px";
     rectMain.style.height = rectMainHeight + "px";

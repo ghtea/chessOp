@@ -67,7 +67,7 @@ body {
 
 #tableMain tbody tr {
   height: 90px;
-  border-bottom: silver solid 3px;
+  border-bottom: #999999 solid 3px;
 }
 
 .barRate {
