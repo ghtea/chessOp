@@ -2,9 +2,11 @@
 var tableMain = document.getElementById("tableMain");
 var lengthTable = dataOriginal.length;
 
+var startMainWidth = 20;
 var ratioMainWidth = 60;
+var startMainHeight = 10;
 var ratioMainHeight = 30;
-var ratioBarHeight = 2;
+var ratioBarHeight = 2.5;
 
 function compaireFunc(key) {
   return function(a, b) {
@@ -62,10 +64,10 @@ function showAll() {
 
     /* rect Main below */
     var rectMain = document.createElement("div");
-    var rectMainWidth = current_movesNumZ * ratioMainWidth;
-    var rectMainHeight = current_playNumZ * ratioMainHeight;
+    var rectMainWidth = startMainWidth + current_movesNumZ * ratioMainWidth;
+    var rectMainHeight = startMainHeight + current_playNumZ * ratioMainHeight;
 
-    var currentWeight = current_tPNvalueZ / 6 + 1;
+    var currentWeight = current_tPNvalueZ;
     var rectMainColor = pickHex("#FF3130", "#33D71E", currentWeight);
 
     rectMain.style.width = rectMainWidth + "px";

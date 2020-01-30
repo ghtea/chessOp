@@ -31,7 +31,11 @@ html {
 }
 
 #tableMain tbody tr {
-  height: 80px;
+  height: 90px;
+  border-bottom: silver solid 3px;
+}
+
+.rectMain {
 }
 
 .barRate {
