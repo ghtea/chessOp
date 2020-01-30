@@ -12,7 +12,8 @@ var startMainWidth = 20;
 var ratioMainWidth = 60;
 var startMainHeight = 10;
 var ratioMainHeight = 30;
-var ratioBarHeight = 3;
+
+var ratioBarHeight = 1.2;
 
 var colorPiece = "#33D71E";
 var colorFight = "#FF3130";
@@ -88,6 +89,7 @@ function showAll() {
     cell3.appendChild(rectMain);
 
     /* 3 bars below */
+    /*
     var wWinRateResult;
     var bWinRateResult;
     if (this_wWinRateGap >= 0) {
@@ -97,14 +99,15 @@ function showAll() {
       bWinRateResult = -this_wWinRateGap;
       wWinRateResult = 0;
     }
+    */
 
     var rectBarW = document.createElement("div");
     var rectBarDraw = document.createElement("div");
     var rectBarB = document.createElement("div");
 
-    rectBarW.style.height = wWinRateResult + "px";
-    rectBarDraw.style.height = this_drawRate + "px";
-    rectBarB.style.height = bWinRateResult + "px";
+    rectBarW.style.height = this_wWinRate * ratioBarHeight + "px";
+    rectBarDraw.style.height = this_drawRate * ratioBarHeight + "px";
+    rectBarB.style.height = this_bWinRate * ratioBarHeight + "px";
 
     rectBarW.classList.add("barRate");
     rectBarDraw.classList.add("barRate");

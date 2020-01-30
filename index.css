@@ -124,13 +124,13 @@ tr.rowm5 td:nth-child(2) {
 }
 #tableMain tbody tr td:nth-child(4) .barRate {
   background-color: hsl(0, 0%, 100%);
-  border: hsl(0, 0%, 50%) solid 2px;
+  border: hsl(0, 0%, 33%) solid 2px;
 }
 #tableMain tbody tr td:nth-child(5) .barRate {
   background-color: hsl(0, 0%, 50%);
-  border: hsl(0, 0%, 100%) solid 2px;
+  border: hsl(0, 0%, 10%) solid 2px;
 }
 #tableMain tbody tr td:nth-child(6) .barRate {
   background-color: hsl(0, 0%, 0%);
-  border: hsl(0, 0%, 50%) solid 2px;
+  border: hsl(0, 0%, 666%) solid 2px;
 }
