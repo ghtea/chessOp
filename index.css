@@ -29,9 +29,20 @@ body {
 #divE4,
 #divD4 {
   width: 100px;
+  height: 50px;
   margin-left: 10px;
   margin-right: 10px;
   font-size: 1.2rem;
+}
+
+#divE4 {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+#divD4 {
+  background-color: #ffffff;
+  color: #000000;
 }
 
 #rdE4,

@@ -35,7 +35,7 @@ function showAll() {
     var this_wWinRate = dataOriginal[i]["wWinRate"];
     var this_bWinRate = dataOriginal[i]["bWinRate"];
     var this_mBefore = dataOriginal[i]["mBefore"];
-    var thismThis = dataOriginal[i]["mThis"];
+    var this_mThis = dataOriginal[i]["mThis"];
     var this_stage = dataOriginal[i]["stage"];
 
     var this_row = tableMain.insertRow(i + 1);
@@ -104,11 +104,22 @@ function showAll() {
 
   var btnsMove = document.getElementsByClassName("btnMove");
   for (var i = 0; i < lengthTable; i++) {
-    btnsMove[i].addEventListener("click", showHide);
+    btnsMove[i].addEventListener("click", hideShowSome);
+  }
+
+  currentStage = 2;
+  for (var i = 0; i < lengthTable; i++) {
+    var this_row = document.getElementsByClassName("rowTableMain")[i];
+    var this_stage = dataOriginal[i]["stage"];
+    if (currentStage == this_stage) {
+      this_row.classList.remove("rowHide");
+    } else {
+      this_row.classList.add("rowHide");
+    }
   }
 }
 
-function showHide() {
+function hideShowSome() {
   currentStage = this.getAttribute("id");
   for (var i = 0; i < lengthTable; i++) {
     var this_row = document.getElementsByClassName("rowTableMain")[i];
