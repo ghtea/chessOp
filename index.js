@@ -50,12 +50,7 @@ function showAll() {
     this_row.classList.add("row" + "m" + this_stage);
     this_row.setAttribute("id", "row" + this_mFull);
 
-    cell1.innerHTML =
-      "<label><input type='button' class='btnMove' id=" +
-      this_mFull +
-      "/>&#128073;</label>";
     cell1.innerHTML = this_mBefore;
-    cell2.innerHTML = this_mThis;
 
     /* label, button first */
     var labelMain = document.createElement("label");
@@ -63,6 +58,10 @@ function showAll() {
     inputBtnMain.setAttribute("type", "button");
     inputBtnMain.classList.add("btnMove");
     inputBtnMain.setAttribute("id", this_mFull);
+
+    labelMain.appendChild(inputBtnMain);
+    label.textContent = this_mThis;
+    cell2.appendChild(labelMain);
 
     /* rect Main below */
     var rectMain = document.createElement("div");
@@ -77,10 +76,7 @@ function showAll() {
     rectMain.style.backgroundColor = rectMainColor;
 
     rectMain.classList.add("rectMain");
-
-    labelMain.appendChild(inputBtnMain);
-    labelMain.appendChild(rectMain);
-    cell3.appendChild(labelMain);
+    cell3.appendChild(rectMain);
 
     /* 3 bars below */
     var wWinRateResult;
