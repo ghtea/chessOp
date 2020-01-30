@@ -84,6 +84,18 @@ body {
   text-align: left;
 }
 
+tr.rowm2 td:nth-child(3),
+tr.rowm4 td:nth-child(3) {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+tr.rowm3 td:nth-child(3),
+tr.rowm5 td:nth-child(3) {
+  background-color: #ffffff;
+  color: #000000;
+}
+
 #tableMain tbody tr td:nth-child(5),
 #tableMain tbody tr td:nth-child(6),
 #tableMain tbody tr td:nth-child(7) {

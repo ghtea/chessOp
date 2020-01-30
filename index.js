@@ -64,7 +64,6 @@ function showAll() {
     var rectMainHeight = startMainHeight + this_playNumZ * ratioMainHeight;
 
     var currentWeight = this_tPNvalueZ;
-    console.log(rectMainColor);
     var rectMainColor = pSBC(currentWeight, colorPiece, colorFight);
 
     rectMain.style.width = rectMainWidth + "px";
