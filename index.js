@@ -66,11 +66,12 @@ function showAll() {
     */
 
     cell2.innerHTML =
-      "<input type='button' class = 'btnMove' id=" +
+      "<label>" +
+      "<input type='button' class = 'btnMove' value =" +
       this_mFull +
-      " value =" +
+      ">" +
       this_mThis +
-      ">";
+      "</label>";
 
     /* rect Main below */
     var rectMain = document.createElement("div");
@@ -135,7 +136,7 @@ function showAll() {
 }
 
 function hideShowSome() {
-  clikedMoveFull = this.getAttribute("id");
+  clikedMoveFull = this.textContent;
   console.log(this);
   console.log(clikedMoveFull);
   for (var i = 0; i < lengthTable; i++) {
