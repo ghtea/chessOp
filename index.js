@@ -69,7 +69,7 @@ function showAll() {
     cell2.innerHTML =
       "<input type='button' class = 'btnMove' id=" +
       this_mFull +
-      "value =" +
+      " value =" +
       this_mThis +
       ">";
 
