@@ -10,9 +10,20 @@ html {
   font-size: 16px;
 }
 
-.barRate {
-  width: 30px;
-  background-color: grey;
+#divTop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#divE4,
+#divD4 {
+  font-size: 1.2rem;
+}
+
+#rdE4,
+#rdD4 {
+  display: none;
 }
 
 #tableMain tbody th {
@@ -21,4 +32,9 @@ html {
 
 #tableMain tbody tr {
   height: 80px;
+}
+
+.barRate {
+  width: 30px;
+  background-color: grey;
 }
