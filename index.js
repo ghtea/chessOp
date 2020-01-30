@@ -1,4 +1,7 @@
-/* dataOriginal 이용 가능 (배열) */
+/* 이용 가능한 것들
+dataOriginal (배열) 
+pSBC (함수)
+*/
 var tableMain = document.getElementById("tableMain");
 var lengthTable = dataOriginal.length;
 
@@ -8,8 +11,8 @@ var startMainHeight = 10;
 var ratioMainHeight = 30;
 var ratioBarHeight = 2.5;
 
-var colorFight = "FF3130";
-var colorPiece = "33D71E";
+var colorPiece = "#33D71E";
+var colorFight = "#FF3130";
 
 function compaireFunc(key) {
   return function(a, b) {
@@ -61,7 +64,7 @@ function showAll() {
 
     var currentWeight = current_tPNvalueZ;
     console.log(rectMainColor);
-    var rectMainColor = blend_colors(colorFight, colorPiece, currentWeight);
+    var rectMainColor = pSBC(currentWeight, colorPiece, colorFight);
 
     rectMain.style.width = rectMainWidth + "px";
     rectMain.style.height = rectMainHeight + "px";
