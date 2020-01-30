@@ -76,6 +76,10 @@ body {
   width: 24px;
 }
 
+#tableMain {
+  border-collapse: collapse;
+}
+
 #tableMain tbody th {
   font-size: 0.8rem;
 }
@@ -89,14 +93,14 @@ body {
   display: none;
 }
 
-.btnMove {
-  display: none;
-}
-
 /* moves before */
 #tableMain tbody tr td:nth-child(1) {
   color: #333333;
   text-align: left;
+}
+
+.btnMove {
+  display: none;
 }
 
 tr.rowm2 td:nth-child(2),
