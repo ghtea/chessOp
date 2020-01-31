@@ -8,7 +8,6 @@ var tableMain = document.getElementById("tableMain");
 var lengthTable = dataOriginal.length;
 
 var currentStage;
-var clikedMoveFull;
 
 var startMainWidth = 20;
 var ratioMainWidth = 60;
@@ -53,7 +52,13 @@ function showAll() {
     this_row.classList.add("row" + "m" + this_stage);
     this_row.setAttribute("id", "row" + this_mFull);
 
-    cell1.innerHTML = this_mBefore;
+    cell1.innerHTML =
+      "<label>" +
+      "<input type='button' class = 'btnMoveBefore' value =" +
+      this_mBefore.replace(/ /g, "_") +
+      ">" +
+      this_mBefore +
+      "</label>";
 
     /*  belows don't work... so I tried like next
     var labelMain = document.createElement("label");
@@ -121,10 +126,11 @@ function showAll() {
   }
 
   var btnsMove = document.getElementsByClassName("btnMove");
+  var btnsMoveBefore = document.getElementsByClassName("btnMoveBefore");
   for (var i = 0; i < lengthTable; i++) {
-    btnsMove[i].addEventListener("click", hideShowSome);
+    btnsMove[i].addEventListener("click", hideShowCurrentMove);
+    btnsMoveBefore[i].addEventListener("click", hideShowMoveBefore);
   }
-
   btnsM1[0].addEventListener("click", hideShowM1);
   btnsM1[1].addEventListener("click", hideShowM1);
 
@@ -155,15 +161,28 @@ function hideShowM1() {
   }
 }
 
-function hideShowSome() {
-  clikedMoveFull = this.value;
-  console.log(this);
-  console.log(clikedMoveFull);
+function hideShowCurrentMove() {
+  var clikedMoveFull = this.value;
   for (var i = 0; i < lengthTable; i++) {
     var this_row = document.getElementsByClassName("rowTableMain")[i];
     var this_mBefore = dataOriginal[i]["mBefore"].replace(/ /g, "_");
 
     if (clikedMoveFull == this_mBefore) {
+      this_row.classList.remove("rowHide");
+    } else {
+      this_row.classList.add("rowHide");
+    }
+  }
+}
+
+function hideShowMoveBefore() {
+  /* MoveBefore  를 클릭했을때 적혀져있는 상황의 또 이전 상황을 value 값으로 가져온다 */
+  var clikedMoveBefore = this.value;
+  for (var i = 0; i < lengthTable; i++) {
+    var this_row = document.getElementsByClassName("rowTableMain")[i];
+    var this_mBefore = dataOriginal[i]["mBefore"].replace(/ /g, "_");
+
+    if (clikedMoveBefore == this_mBefore) {
       this_row.classList.remove("rowHide");
     } else {
       this_row.classList.add("rowHide");

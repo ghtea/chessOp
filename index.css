@@ -94,8 +94,22 @@ body {
 
 /* moves before */
 #tableMain tbody tr td:nth-child(1) {
-  color: #333333;
-  text-align: left;
+  font-size: 1rem;
+}
+
+.btnMoveBefore {
+  display: none;
+}
+
+tr.rowm2 td:nth-child(1),
+tr.rowm4 td:nth-child(1) {
+  background-color: #eeeeee;
+  color: #111111;
+}
+tr.rowm3 td:nth-child(1),
+tr.rowm5 td:nth-child(1) {
+  background-color: #111111;
+  color: #eeeeee;
 }
 
 /* current move */
