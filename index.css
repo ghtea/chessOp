@@ -103,18 +103,18 @@ body {
 
 tr.rowm2 td:nth-child(1),
 tr.rowm4 td:nth-child(1) {
-  background-color: #eeeeee;
-  color: #111111;
+  background-color: #ffffff;
+  color: #000000;
 }
 tr.rowm3 td:nth-child(1),
 tr.rowm5 td:nth-child(1) {
-  background-color: #111111;
-  color: #eeeeee;
+  background-color: #000000;
+  color: #ffffff;
 }
 
 /* current move */
 #tableMain tbody tr td:nth-child(2) {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 
 .btnMove {
