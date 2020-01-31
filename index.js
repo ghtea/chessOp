@@ -55,7 +55,7 @@ function showAll() {
     cell1.innerHTML =
       "<label>" +
       "<input type='button' class = 'btnMoveBefore' value =" +
-      this_mBefore.replace(/ /g, "_") +
+      this_mBefore.replace("\\s\\S+$", "").replace(/ /g, "_") +
       ">" +
       this_mBefore +
       "</label>";
