@@ -52,7 +52,7 @@ function showAll() {
     this_row.classList.add("row" + "m" + this_stage);
     this_row.setAttribute("id", "row" + this_mFull);
 
-    console(this_mBefore.replace("(\\s[^\\s]+)$", "").replace(/ /g, "_"));
+    console.log(this_mBefore.replace("(\\s[^\\s]+)$", "").replace(/ /g, "_"));
     cell1.innerHTML =
       "<label>" +
       "<input type='button' class = 'btnMoveBefore' value =" +
