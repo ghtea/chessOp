@@ -2,6 +2,8 @@
 dataOriginal (배열) 
 pSBC (함수)
 */
+var btnsM1 = document.getElementsByClassName("btnM1");
+var currentMove1;
 var tableMain = document.getElementById("tableMain");
 var lengthTable = dataOriginal.length;
 
@@ -25,8 +27,7 @@ function compaireFunc(key) {
 }
 
 function showAll() {
-  var currentRadio = document.querySelector('input[name="m1"]:checked');
-  var currentMove1 = currentRadio.value;
+  currentMove1 = "e4";
   for (var i = 0; i < lengthTable; i++) {
     var this_mFull = dataOriginal[i]["mFull"];
     var this_movesNumZ = dataOriginal[i]["movesNumZ"];
@@ -124,6 +125,24 @@ function showAll() {
     btnsMove[i].addEventListener("click", hideShowSome);
   }
 
+  btnsM1[0].addEventListener("click", hideShowM1);
+  btnsM1[1].addEventListener("click", hideShowM1);
+
+  /* can't use hideShowM1 because I can't use 'this'  */
+  for (var i = 0; i < lengthTable; i++) {
+    var this_row = document.getElementsByClassName("rowTableMain")[i];
+    var this_mBefore = dataOriginal[i]["mBefore"];
+
+    if (currentMove1 == this_mBefore) {
+      this_row.classList.remove("rowHide");
+    } else {
+      this_row.classList.add("rowHide");
+    }
+  }
+}
+
+function hideShowM1() {
+  currentMove1 = this.value;
   for (var i = 0; i < lengthTable; i++) {
     var this_row = document.getElementsByClassName("rowTableMain")[i];
     var this_mBefore = dataOriginal[i]["mBefore"];
@@ -153,4 +172,3 @@ function hideShowSome() {
 }
 
 window.onload = showAll();
-currentRadio.addEventListener("click", showAll);
