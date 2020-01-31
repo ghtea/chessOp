@@ -52,11 +52,15 @@ function showAll() {
     this_row.classList.add("row" + "m" + this_stage);
     this_row.setAttribute("id", "row" + this_mFull);
 
-    console.log(this_mBefore.replace("(\\s[^\\s]+)$", "").replace(/ /g, "_"));
+    var edittedText1 = this_mBefore.replace("(\\s[^\\s]+)$", "");
+    console.log(edittedText1);
+    var edittedText2 = edittedText1.replace(/ /g, "_");
+    console.log(edittedText2);
+
     cell1.innerHTML =
       "<label>" +
       "<input type='button' class = 'btnMoveBefore' value =" +
-      this_mBefore.replace("(\\s[^\\s]+)$", "").replace(/ /g, "_") +
+      edittedText2 +
       ">" +
       this_mBefore +
       "</label>";
