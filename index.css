@@ -52,6 +52,10 @@ body {
   vertical-align: middle;
 }
 
+.btnM1 {
+  display: none;
+}
+
 .col1 {
   width: 100px;
 }
@@ -99,7 +103,7 @@ body {
   font-size: 1.2rem;
 }
 
-.btnMove{
+.btnMove {
   display: none;
 }
 
