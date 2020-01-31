@@ -52,7 +52,7 @@ function showAll() {
     this_row.classList.add("row" + "m" + this_stage);
     this_row.setAttribute("id", "row" + this_mFull);
 
-    var edittedText1 = this_mBefore.replace("(\\s[^\\s]+)$", "");
+    var edittedText1 = this_mBefore.replace(/\s\S+)$/, "");
     console.log(edittedText1);
     var edittedText2 = edittedText1.replace(/ /g, "_");
     console.log(edittedText2);
