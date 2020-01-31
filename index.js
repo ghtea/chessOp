@@ -25,7 +25,8 @@ function compaireFunc(key) {
 }
 
 function showAll() {
-  var currentMove1 = document.querySelector('input[name="m1"]:checked').value;
+  var currentRadio = document.querySelector('input[name="m1"]:checked');
+  var currentMove1 = currentRadio.value;
   for (var i = 0; i < lengthTable; i++) {
     var this_mFull = dataOriginal[i]["mFull"];
     var this_movesNumZ = dataOriginal[i]["movesNumZ"];
@@ -68,7 +69,7 @@ function showAll() {
     cell2.innerHTML =
       "<label>" +
       "<input type='button' class = 'btnMove' value =" +
-      this_mFull +
+      this_mFull.replace(/ /g, "_") +
       ">" +
       this_mThis +
       "</label>";
@@ -136,12 +137,12 @@ function showAll() {
 }
 
 function hideShowSome() {
-  clikedMoveFull = this.textContent;
+  clikedMoveFull = this.value;
   console.log(this);
   console.log(clikedMoveFull);
   for (var i = 0; i < lengthTable; i++) {
     var this_row = document.getElementsByClassName("rowTableMain")[i];
-    var this_mBefore = dataOriginal[i]["mBefore"];
+    var this_mBefore = dataOriginal[i]["mBefore"].replace(/ /g, "_");
 
     if (clikedMoveFull == this_mBefore) {
       this_row.classList.remove("rowHide");
@@ -152,3 +153,4 @@ function hideShowSome() {
 }
 
 window.onload = showAll();
+currentRadio.addEventListener("click", showAll);
